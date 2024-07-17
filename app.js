@@ -3,6 +3,7 @@ dotenv.config();
 import './src/database';
 import express from 'express';
 import pacientesRoutes from './src/routes/pacientesRoutes';
+import procedimentosRoutes from './src/routes/procedimentosRoutes';
 class App {
     constructor(){
         this.app = express();
@@ -17,6 +18,7 @@ class App {
   
     routes() {
         this.app.use('/pacientes', pacientesRoutes);
+        this.app.use('/procedimentos', procedimentosRoutes);
     }
   }
   
